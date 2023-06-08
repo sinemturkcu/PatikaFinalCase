@@ -1,5 +1,5 @@
-package com.sinemturkcu.weatherapplication;
-import com.sinemturkcu.weatherapplication.controller.WeatherController;
+package com.sinemturkcu.weatherapplication.controller;
+
 import com.sinemturkcu.weatherapplication.controller.contract.WeatherControllerContract;
 import com.sinemturkcu.weatherapplication.controller.contract.impl.WeatherControllerContractImpl;
 import com.sinemturkcu.weatherapplication.dto.*;
@@ -48,7 +48,15 @@ public class WeatherControllerTest {
 
         WeatherDTO expectedResponse = new WeatherDTO("200", new BigDecimal("0.01"), 1, forecastList, city);
 
-        // TODO: Perform the actual test and compare the expectedResponse with the actual response from the controller
+
+        Mockito.when(weatherService.getWeatherForecast(Mockito.anyString()))
+                .thenReturn(expectedResponse);
+
+
+        WeatherDTO actualResponse = weatherController.getWeatherForecast(city.name());
+
+        // Compare the expectedResponse with the actualResponse
+        assertEquals(expectedResponse, actualResponse);
     }
 
     @Test

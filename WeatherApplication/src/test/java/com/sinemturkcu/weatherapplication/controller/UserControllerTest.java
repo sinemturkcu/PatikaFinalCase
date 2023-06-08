@@ -1,4 +1,4 @@
-package com.sinemturkcu.weatherapplication;
+package com.sinemturkcu.weatherapplication.controller;
 import com.sinemturkcu.weatherapplication.controller.UserController;
 import com.sinemturkcu.weatherapplication.controller.contract.UserControllerContract;
 import com.sinemturkcu.weatherapplication.dto.WeatherDTO;

@@ -1,6 +1,5 @@
-package com.sinemturkcu.weatherapplication;
+package com.sinemturkcu.weatherapplication.controller;
 
-import com.sinemturkcu.weatherapplication.controller.AuthenticationController;
 import com.sinemturkcu.weatherapplication.controller.contract.AuthenticationControllerContract;
 import com.sinemturkcu.weatherapplication.controller.contract.impl.AuthenticationControllerContractImpl;
 import com.sinemturkcu.weatherapplication.request.AuthenticationRequest;
