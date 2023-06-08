@@ -4,13 +4,8 @@ import com.sinemturkcu.weatherapplication.controller.contract.AuthenticationCont
 import com.sinemturkcu.weatherapplication.request.AuthenticationRequest;
 import com.sinemturkcu.weatherapplication.request.RegisterRequest;
 import com.sinemturkcu.weatherapplication.response.AuthenticationResponse;
-import com.sinemturkcu.weatherapplication.service.AuthenticationService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
