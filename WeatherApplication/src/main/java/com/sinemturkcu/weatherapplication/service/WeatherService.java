@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import java.math.BigDecimal;
 
 @Service
-public class WeatherService extends BaseEntityService<Weather, WeatherRepository> {
+public class WeatherService {
     @Value("${weatherApiKey}")
     private String weatherApiKey;
 
@@ -26,9 +26,6 @@ public class WeatherService extends BaseEntityService<Weather, WeatherRepository
 
     private static final Logger logger = LogManager.getLogger(WeatherService.class);
 
-    public WeatherService(WeatherRepository repository) {
-        super(repository);
-    }
 
     public WeatherDTO getWeatherForecast(String city) {
         logger.info("Request to getWeatherForecast method: city={}", city);

@@ -6,6 +6,8 @@ import jakarta.persistence.*;
 
 import java.util.Collection;
 import java.util.List;
+
+import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,7 +22,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @Entity
 @Table(name = "USER")
-public class User extends BaseEntity implements UserDetails {
+public class User implements UserDetails {
 
     @Id
     @GeneratedValue(
@@ -36,6 +38,7 @@ public class User extends BaseEntity implements UserDetails {
     private String lastname;
 
     @Column(name = "EMAIL",unique = true)
+    @Email
     private String email;
 
     @Column(name = "PASSWORD")

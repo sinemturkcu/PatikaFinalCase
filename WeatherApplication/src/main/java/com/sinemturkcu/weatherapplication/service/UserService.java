@@ -6,7 +6,6 @@ import com.sinemturkcu.weatherapplication.entity.Weather;
 import com.sinemturkcu.weatherapplication.exception.NotFoundException;
 import com.sinemturkcu.weatherapplication.repository.UserRepository;
 import com.sinemturkcu.weatherapplication.repository.WeatherRepository;
-import com.sinemturkcu.weatherapplication.service.base.BaseEntityService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -16,14 +15,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class UserService extends BaseEntityService<User, UserRepository> {
+public class UserService {
     private final UserRepository userRepository;
     private final WeatherRepository weatherRepository;
     private final WeatherService weatherService;
     private static final Logger logger = LogManager.getLogger(UserService.class);
 
     public UserService(UserRepository repository, WeatherRepository weatherRepository, WeatherService weatherService) {
-        super(repository);
         this.weatherRepository = weatherRepository;
         this.userRepository = repository;
         this.weatherService = weatherService;
