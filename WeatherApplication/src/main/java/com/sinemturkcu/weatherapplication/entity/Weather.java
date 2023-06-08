@@ -8,8 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-import java.util.Collections;
+
+
 
 @Entity
 @Table(name = "WEATHER")
@@ -36,10 +36,5 @@ public class Weather {
 
     }
 
-    public WeatherListItemDTO toWeatherListItemDTO() {
-        LocalDateTime timestamp = LocalDateTime.now();
-        WeatherListMainItem mainItem = new WeatherListMainItem(null,null,null,null,null);
 
-        return new WeatherListItemDTO(timestamp, mainItem, Collections.emptyList());
-    }
 }

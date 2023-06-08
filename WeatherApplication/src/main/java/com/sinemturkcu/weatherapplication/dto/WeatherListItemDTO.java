@@ -11,7 +11,6 @@ public record WeatherListItemDTO(
         LocalDateTime dt_txt,
         WeatherListMainItem main,
         List<WeatherListWeatherItem> weather
-    //    WeatherListCloudItem clouds,
-   //     WeatherListWindItem wind
+
 ) {
 }
